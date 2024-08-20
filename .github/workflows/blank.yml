@@ -26,11 +26,6 @@ jobs:
         sudo apt update
         sudo apt -y install python python3 python3-pip python3-pip cpio wget
       
-    - name: Set variables
-      run: |
-        echo "name=date::$(date +%F)" >> $GITHUB_OUTPUT
-      id: var
-      
     - name: Install TWRP generator 
       run: |
         pip3 install twrpdtgen
