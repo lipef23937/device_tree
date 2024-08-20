@@ -43,7 +43,7 @@ jobs:
       
     - name: Start build
       run: |
-        python3 -m twrpdtgen -o dt/ *.img
+        python3 -m twrpdtgen -o dt/ $PWD/recovery.img
 
     - name: ZIP device tree
       run: |
