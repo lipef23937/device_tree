@@ -44,10 +44,11 @@ jobs:
       
     - name: Start build
       run: |
-        python3 -m twrpdtgen -o dt/ $PWD/recovery.img
+        sudo python3 -m twrpdtgen -o dt/ $PWD/recovery.img
 
     - name: ZIP device tree
       run: |
+        sudo chmod 777 -R ./dt
         zip -r DeviceTree.zip ./dt
 
     - name: Upload to Release
