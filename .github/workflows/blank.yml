@@ -33,8 +33,7 @@ jobs:
       
     - name: Install TWRP generator 
       run: |
-        sudo apt install cpio
-        pip3 install twrpdtgen
+        sudo pip3 install twrpdtgen
         mkdir dt
     
     - name: Download boot or recovery img
